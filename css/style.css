@@ -1,0 +1,847 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f1e8;
+    color: #26382f;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background-color: #234f3d;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.header-content {
+    min-height: 88px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 140px;
+
+    height: auto;
+}
+
+
+/* NAVEGAÇÃO */
+
+.nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    margin-left: auto;
+}
+
+.nav a {
+    position: relative;
+
+    padding: 32px 0;
+
+    color: #f4f1e8;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #d8b45a;
+}
+
+
+/* LINHA DO MENU */
+
+.nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 23px;
+
+    width: 0;
+
+    height: 2px;
+
+    background-color: #d8b45a;
+
+    transition: 0.3s;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+
+/* AÇÕES */
+
+.header-actions {
+    flex-shrink: 0;
+}
+
+.header-actions a {
+    padding: 10px 16px;
+
+    border: 1px solid rgba(244, 241, 232, 0.4);
+
+    border-radius: 20px;
+
+    color: #f4f1e8;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.header-actions a:hover {
+    background-color: #d8b45a;
+
+    border-color: #d8b45a;
+
+    color: #26382f;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+
+.hero {
+    min-height: 620px;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(35, 79, 61, 0.68),
+            rgba(35, 79, 61, 0.50)
+        ),
+        url("../assets/images/hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+
+    position: relative;
+}
+
+.hero-content {
+    width: 100%;
+}
+
+.hero-text {
+    max-width: 760px;
+}
+
+
+/* TAGS */
+
+.hero-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 22px;
+}
+
+.hero-tag {
+    padding: 7px 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    border-radius: 20px;
+
+    color: #f4f1e8;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* TÍTULO */
+
+.hero h1 {
+    max-width: 750px;
+
+    font-size: clamp(44px, 6vw, 72px);
+
+    line-height: 1.05;
+
+    letter-spacing: -1px;
+}
+
+
+/* TEXTO */
+
+.hero p {
+    max-width: 650px;
+
+    margin-top: 22px;
+
+    color: #f4f1e8;
+
+    font-size: 19px;
+
+    line-height: 1.6;
+}
+
+
+
+/* =========================
+   BUSCA
+========================= */
+
+.search-box {
+    display: flex;
+
+    max-width: 680px;
+
+    margin-top: 32px;
+
+    padding: 6px;
+
+    background-color: rgba(255, 255, 255, 0.95);
+
+    border-radius: 8px;
+}
+
+.search-box input {
+    flex: 1;
+
+    padding: 15px 18px;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #26382f;
+
+    font-size: 16px;
+}
+
+.search-box input::placeholder {
+    color: #718078;
+}
+
+.search-box button {
+    padding: 14px 25px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #c9784a;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background-color: #a85d38;
+}
+
+
+.hero-frases {
+    position: absolute;
+
+    top: 50%;
+
+    right: 5%;
+
+    transform: translateY(-50%);
+
+    width: 340px;
+
+    padding: 10px 25px;
+
+    background-color: rgba(35, 79, 61, 0.82);
+
+    border: 1px solid rgba(244, 241, 232, 0.2);
+
+    border-radius: 14px;
+
+    backdrop-filter: blur(5px);
+}
+
+.hero-frase {
+    position: relative;
+
+    padding: 22px 5px;
+
+    color: #f4f1e8;
+}
+
+.hero-frase + .hero-frase {
+    border-top: 1px solid rgba(244, 241, 232, 0.22);
+}
+
+.hero-frase p {
+    margin: 0;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+.hero-frase-detalhe {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #d8b45a;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   CATEGORIAS
+========================= */
+
+.categorias {
+    padding: 80px 0;
+
+    background-color: #f4f1e8;
+}
+
+.categorias .section-header {
+    margin-bottom: 35px;
+}
+
+.categorias .section-tag {
+    color: #356b52;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.categorias h2 {
+    margin-top: 8px;
+
+    color: #234f3d;
+
+    font-size: 36px;
+}
+
+
+/* GRID */
+
+.categorias-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+/* CARD */
+
+.categoria {
+    position: relative;
+
+    display: block;
+
+    overflow: hidden;
+
+    min-height: 280px;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(35, 79, 61, 0.18);
+
+    text-decoration: none;
+
+    background-color: #234f3d;
+}
+
+
+/* IMAGEM */
+
+.categoria img {
+    width: 100%;
+    height: 280px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+
+/* SOBREPOSIÇÃO */
+
+.categoria::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            transparent 30%,
+            rgba(35, 79, 61, 0.9)
+        );
+}
+
+
+/* CONTEÚDO */
+
+.categoria-conteudo {
+    position: absolute;
+
+    z-index: 2;
+
+    left: 22px;
+    right: 22px;
+    bottom: 20px;
+}
+
+.categoria-conteudo h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 25px;
+}
+
+.categoria-conteudo p {
+    margin-top: 6px;
+
+    color: #f4f1e8;
+
+    font-size: 14px;
+}
+
+
+/* HOVER */
+
+.categoria:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   DESTINOS
+========================= */
+
+.destinos {
+    padding: 80px 0;
+
+    background-color: #fff8e8;
+}
+
+.section-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: end;
+
+    margin-bottom: 30px;
+}
+
+.section-tag {
+    color: #3a8f5c;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.section-header h2 {
+    margin-top: 8px;
+
+    color: #087ea4;
+}
+
+.section-header a {
+    color: #f47c6c;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.destinos-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+}
+
+.card-destino {
+    overflow: hidden;
+
+    background-color: white;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.10);
+
+    transition: 0.3s;
+}
+
+.card-destino:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-destino img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+}
+
+.card-conteudo {
+    padding: 22px;
+}
+
+.card-conteudo span {
+    color: #3a8f5c;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.card-conteudo h3 {
+    margin: 8px 0;
+
+    color: #087ea4;
+
+    font-size: 24px;
+}
+
+.card-conteudo p {
+    color: #546e7a;
+
+    line-height: 1.6;
+}
+
+.card-conteudo button {
+    margin-top: 18px;
+
+    padding: 11px 18px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #087ea4;
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.card-conteudo button:hover {
+    background-color: #3a8f5c;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding: 40px 0;
+
+
+    background-color: #234f3d;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    color: white;
+
+    text-align: center;
+}
+
+.footer p + p {
+    margin-top: 10px;
+
+    color: #d8f3f8;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 700px) {
+
+    .header-content {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px 0;
+    }
+
+    .nav {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 70px 0;
+    }
+
+    .search-box {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    .section-header {
+        align-items: start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+}
+
+/* =========================
+   TRILHAS
+========================= */
+
+.trilhas {
+    padding: 80px 0;
+
+    background-color: #e8f8fb;
+}
+
+.trilhas-introducao {
+    max-width: 700px;
+
+    margin-bottom: 35px;
+
+    color: #546e7a;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+.trilhas-container {
+    overflow: hidden;
+
+    width: 100%;
+}
+
+.trilhas-grid {
+    display: flex;
+
+    gap: 25px;
+
+    transition: transform 0.5s ease;
+}
+
+.card-trilha {
+    flex: 0 0 calc((100% - 50px) / 3);
+    
+    overflow: hidden;
+
+    background-color: white;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.10);
+
+    transition: 0.3s;
+}
+
+.card-trilha:hover {
+    transform: translateY(-6px);
+}
+
+.card-trilha img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+}
+
+.card-trilha-conteudo {
+    padding: 22px;
+}
+
+.trilha-local {
+    color: #3a8f5c;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.card-trilha h3 {
+    margin: 8px 0;
+
+    color: #087ea4;
+
+    font-size: 22px;
+}
+
+.card-trilha p {
+    color: #546e7a;
+
+    line-height: 1.6;
+}
+
+.trilha-info {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 18px;
+
+    flex-wrap: wrap;
+}
+
+.trilha-info span {
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    background-color: #fff8e8;
+
+    color: #3a8f5c;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.card-trilha button {
+    margin-top: 20px;
+
+    padding: 11px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #3a8f5c;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.card-trilha button:hover {
+    background-color: #087ea4;
+}
+
+
+.trilhas-controles {
+    display: flex;
+
+    gap: 10px;
+}
+
+.trilhas-controles button {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid #234f3d;
+
+    border-radius: 50%;
+
+    background-color: transparent;
+
+    color: #234f3d;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.trilhas-controles button:hover {
+    background-color: #234f3d;
+
+    color: white;
+}
