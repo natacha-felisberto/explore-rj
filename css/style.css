@@ -744,7 +744,7 @@ body {
 .trilhas-introducao {
     max-width: 700px;
 
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 
     color: #546e7a;
 
@@ -754,9 +754,43 @@ body {
 }
 
 .trilhas-container {
-    overflow: hidden;
+    display: grid;
 
-    width: 100%;
+    grid-template-columns: 45px 1fr 45px;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+#trilha-anterior,
+#trilha-proxima {
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid #234f3d;
+    border-radius: 50%;
+
+    background-color: transparent;
+
+    color: #234f3d;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#trilha-anterior:hover,
+#trilha-proxima:hover {
+    background-color: #234f3d;
+    color: white;
+}
+
+.trilhas-janela {
+    overflow: hidden;
 }
 
 .trilhas-grid {
@@ -769,15 +803,17 @@ body {
 
 .card-trilha {
     flex: 0 0 calc((100% - 50px) / 3);
+
+    min-width: 0;
     
     overflow: hidden;
 
     background-color: white;
 
-    border-radius: 16px;
+    border-radius: 6px;
 
     box-shadow:
-        0 5px 15px rgba(0, 0, 0, 0.10);
+        0 5px 15px rgba(0, 0, 0, 0.1);
 
     transition: 0.3s;
 }
@@ -794,7 +830,7 @@ body {
 }
 
 .card-trilha-conteudo {
-    padding: 22px;
+    padding: 25px;
 }
 
 .trilha-local {
@@ -814,9 +850,12 @@ body {
 }
 
 .card-trilha p {
+    width: 100%;
+    max-width: 100%;
+
     color: #546e7a;
 
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 .trilha-info {
@@ -866,33 +905,3 @@ body {
 }
 
 
-.trilhas-controles {
-    display: flex;
-
-    gap: 10px;
-}
-
-.trilhas-controles button {
-    width: 42px;
-    height: 42px;
-
-    border: 1px solid #234f3d;
-
-    border-radius: 50%;
-
-    background-color: transparent;
-
-    color: #234f3d;
-
-    font-size: 20px;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-.trilhas-controles button:hover {
-    background-color: #234f3d;
-
-    color: white;
-}
