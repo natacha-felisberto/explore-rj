@@ -131,3 +131,267 @@
 
     line-height: 1.7;
 }
+
+
+/* =========================
+   FOTOS DA TRAVESSIA
+========================= */
+
+.trilha-fotos {
+    padding: 60px 0;
+
+    background-color: var(--verde-claro);
+}
+
+.trilha-fotos h2 {
+    margin: 12px 0;
+
+    color: var(--azul);
+}
+
+.trilha-fotos-introducao {
+    max-width: 700px;
+
+    margin-bottom: 25px;
+
+    color: var(--texto-secundario);
+
+    line-height: 1.6;
+}
+
+.trilha-fotos-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.trilha-fotos-grid img {
+    display: block;
+
+    width: 100%;
+    height: 240px;
+
+    object-fit: cover;
+
+    border-radius: 14px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trilha-fotos-grid img:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+}
+
+/* Ajuste para telas menores */
+
+@media (max-width: 700px) {
+
+    .trilha-fotos {
+        padding: 40px 0;
+    }
+
+    .trilha-fotos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trilha-fotos-grid img {
+        height: 220px;
+    }
+
+}
+
+
+
+/* =========================
+   VOLTAR PARA AS TRILHAS
+========================= */
+
+.trilha-voltar {
+    padding: 25px 0 50px;
+
+    background-color: var(--branco);
+}
+
+.trilha-link-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 18px;
+
+    border: 1px solid var(--verde);
+    border-radius: 10px;
+
+    color: var(--verde-escuro);
+
+    font-weight: 600;
+    text-decoration: none;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.trilha-link-voltar:hover {
+    background-color: var(--verde);
+    color: var(--branco);
+
+    transform: translateX(-3px);
+}
+
+.trilha-link-voltar:focus-visible {
+    outline: 3px solid var(--azul);
+    outline-offset: 4px;
+}
+ 
+
+
+/* =========================
+   RESPONSIVIDADE DA TRAVESSIA
+========================= */
+
+@media (max-width: 700px) {
+
+    .trilha-hero {
+        padding: 55px 0;
+    }
+
+    .trilha-hero h1 {
+        font-size: clamp(30px, 8vw, 40px);
+        line-height: 1.15;
+    }
+
+    .trilha-hero p {
+        font-size: 16px;
+    }
+
+    .trilha-informacoes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .trilha-informacoes div {
+        padding: 16px 10px;
+    }
+
+    .trilha-sobre,
+    .trilha-roteiro {
+        padding: 45px 0;
+    }
+
+    .roteiro-item {
+        margin-bottom: 20px;
+    }
+
+    .trilha-alerta .container {
+        padding: 22px;
+    }
+
+    .trilha-voltar {
+        padding: 20px 0 35px;
+    }
+
+}
+
+
+/* Acessibilidade: respeita quem prefere menos animações */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .trilha-fotos-grid img,
+    .trilha-link-voltar {
+        transition: none;
+    }
+
+    .trilha-fotos-grid img:hover,
+    .trilha-link-voltar:hover {
+        transform: none;
+    }
+
+}
+
+
+
+/* =========================
+   MAPA DA TRAVESSIA
+========================= */
+
+.trilha-mapa {
+    padding: 60px 0;
+
+    background-color: var(--branco);
+}
+
+.trilha-mapa h2 {
+    margin: 12px 0;
+
+    color: var(--azul);
+}
+
+.trilha-mapa-introducao {
+    max-width: 700px;
+
+    margin-bottom: 25px;
+
+    color: var(--texto-secundario);
+
+    line-height: 1.6;
+}
+
+.trilha-mapa-conteudo {
+    overflow: hidden;
+
+    height: 380px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+}
+
+.trilha-mapa-conteudo iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+.trilha-mapa-link {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    color: var(--verde-escuro);
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.trilha-mapa-link:hover {
+    color: var(--azul);
+    text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+
+    .trilha-mapa {
+        padding: 40px 0;
+    }
+
+    .trilha-mapa-conteudo {
+        height: 300px;
+    }
+
+}
+
+
+

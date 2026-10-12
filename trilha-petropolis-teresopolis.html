@@ -23,6 +23,18 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/trilha.css">
 
+    
+<link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+>
+
+<script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    defer>
+</script>
+
+
 </head>
 
 
@@ -165,6 +177,55 @@
     </section>
 
 
+
+    <!-- MAPA DA TRAVESSIA -->
+
+    <section class="trilha-mapa">
+
+        <div class="container">
+
+            <span class="section-tag">
+                LOCALIZAÇÃO
+            </span>
+
+            <h2>
+                Onde fica a travessia?
+            </h2>
+
+            <p class="trilha-mapa-introducao">
+                A travessia conecta as sedes de Petrópolis
+                e Teresópolis do Parque Nacional da Serra
+                dos Órgãos.
+            </p>
+
+            <div class="trilha-mapa-conteudo">
+
+                <iframe
+                    src="https://maps.google.com/maps?q=Parque%20Nacional%20da%20Serra%20dos%20%C3%93rg%C3%A3os&t=&z=11&ie=UTF8&iwloc=&output=embed"
+                    title="Mapa de localização do Parque Nacional da Serra dos Órgãos"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <a
+                class="trilha-mapa-link"
+                href="https://www.google.com/maps/search/?api=1&query=Parque+Nacional+da+Serra+dos+Orgaos"
+                target="_blank"
+                rel="noopener noreferrer">
+                Abrir mapa no Google Maps ↗
+            </a>
+
+        </div>
+
+        
+
+    </section>
+
+
+
     <!-- ROTEIRO -->
 
     <section class="trilha-roteiro">
@@ -241,6 +302,50 @@
     </section>
 
 
+
+    <!-- FOTOS DA TRAVESSIA -->
+
+    <section class="trilha-fotos">
+
+        <div class="container">
+
+            <span class="section-tag">
+                GALERIA
+            </span>
+
+            <h2>
+                Fotos da travessia
+            </h2>
+
+            <p class="trilha-fotos-introducao">
+                Conheça algumas das paisagens e formações
+                rochosas encontradas ao longo do percurso.
+            </p>
+
+            <div class="trilha-fotos-grid">
+
+                <img
+                    src="assets/images/travessia.JPG"
+                    alt="Paisagem das montanhas da Travessia Petrópolis x Teresópolis"
+                >
+
+                <img
+                    src="assets/images/pedra-do-sino1.jpeg"
+                    alt="Montanhas da região da Pedra do Sino"
+                >
+
+                <img
+                    src="assets/images/trilha-serra-1.jpg"
+                    alt="Paisagem natural da Serra dos Órgãos"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
     <!-- ATENÇÃO -->
 
     <section class="trilha-alerta">
@@ -263,6 +368,23 @@
     </section>
 
 
+
+    <!-- VOLTAR PARA AS TRILHAS -->
+
+    <section class="trilha-voltar">
+
+        <div class="container">
+
+            <a href="index.html#trilhas" class="trilha-link-voltar">
+                ← Voltar para as trilhas
+            </a>
+
+        </div>
+
+    </section>
+
+
+
 </main>
 
 
@@ -277,6 +399,7 @@
     </p>
 
 </footer>
+
 
 
 </body>
